@@ -55,11 +55,11 @@ static coap_log_t maxlog = LOG_WARNING;        /* default maximum log level */
 static int use_fprintf_for_show_pdu = 1; /* non zero to output with fprintf */
 
 const char *coap_package_name(void) {
-  return PACKAGE_NAME;
+  return /*PACKAGE_NAME*/NULL;
 }
 
 const char *coap_package_version(void) {
-  return PACKAGE_STRING;
+  return /*PACKAGE_STRING*/NULL;
 }
 
 void

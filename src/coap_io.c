@@ -705,6 +705,11 @@ coap_socket_read(coap_socket_t *sock, uint8_t *data, size_t data_len) {
 
 #endif  /* WITH_CONTIKI */
 
+struct in6_pktinfo {
+  struct in6_addr ipi6_addr;        /* src/dst IPv6 address */
+  unsigned int ipi6_ifindex;        /* send/recv interface index */
+};
+
 #if (!defined(WITH_CONTIKI)) != ( defined(HAVE_NETINET_IN_H) || defined(HAVE_WS2TCPIP_H) )
 /* define struct in6_pktinfo and struct in_pktinfo if not available
    FIXME: check with configure
